@@ -1,0 +1,458 @@
+#menu-deroulant, #menu-deroulant ul {
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+}
+#menu-deroulant {
+/* on centre le menu dans la page */
+    text-align: center;
+}
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+}
+#menu-deroulant ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+}
+#menu-deroulant a {
+    text-decoration: none;
+    display: block;
+	padding: 0 25%;
+}
+#menu-deroulant ul {
+    position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+#menu-deroulant li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
+}
+
+#menu-deroulant{
+	 font-family:"Ailerons";
+	 color:#434343;
+ }
+ 
+ p
+ {
+	 font-family:"Brandon";
+	 color:#434343;
+ }
+
+/*slideshow*/
+#slideshow {
+	position: relative;
+	width: 500px;
+	height: 310px;
+	padding: 15px;
+	margin: 10% auto 2em;
+	border: 1px solid #ddd;
+	background: #FFF;
+	/* CSS3 effects */
+	background: linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.2);
+}
+ 
+/* avanced box-shadow
+ * tutorial @
+ * https://www.creativejuiz.fr/blog/les-tutoriels/ombre-avancees-avec-css3-et-box-shadow 
+*/
+#slideshow:before,
+#slideshow:after {
+	position: absolute;
+	bottom:16px;
+	z-index: -10;
+	width: 50%;
+	height: 20px;
+	content: " ";
+	background: rgba(0,0,0,0.1);
+	border-radius: 50%;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.4), 0 20px 10px rgba(0,0,0, 0.7);
+}
+#slideshow:before {
+	left:0;
+	transform: rotate(-4deg);
+}
+#slideshow:after {
+	right:0;
+	transform: rotate(4deg);
+}
+/* gestion des dimensions et débordement du conteneur */
+#slideshow .container {
+	position:relative;
+	width: 100%;
+	height: 310px;
+	overflow: hidden;
+}	
+/* on prévoit un petit espace gris pour la timeline */
+#slideshow .container:after {
+	position:absolute;
+	bottom: 0; left:0;
+	content: " ";
+	width: 100%;
+	height: 1px;
+	background: #999;
+}
+/* 
+   le conteneur des slides
+   en largeur il fait 100% x le nombre de slides
+*/
+#slideshow .slider {
+	position: absolute;
+	left:0; top:0;
+	width: 300%;
+	height: 310px;
+}
+/* annulation des marges sur figure */
+#slideshow figure {
+	position:relative;
+	display:inline-block;
+	padding:0; margin:0;
+}
+/* petit effet de vignette sur les images */
+#slideshow figure:after {
+	position: absolute;
+	display:block;
+	content: " ";
+	top:0; left:0;
+	width: 100%; height: 100%;
+	box-shadow: 0 0 65px rgba(0,0,0, 0.5) inset;
+}
+/* styles de nos légendes */
+#slideshow figcaption {
+	position:absolute;
+	left:0; right:0; bottom: 5px;
+	padding: 20px;
+	margin:0;
+	border-top: 1px solid rgb(225,225,225);
+	text-align:center;
+	letter-spacing: 0.05em;
+	word-spacing: 0.05em;
+	font-family:"Ailerons";
+	background: #fff;
+	background: rgba(255,255,255,0.7);
+	text-shadow: -1px -1px 0 rgba(255,255,255,0.3);
+}
+/* fonction d'animation, n'oubliez pas de prefixer ! */
+@keyframes slider {
+	0%, 20%, 100%	{ left: 0 }
+	25%, 45%		{ left: -100% }
+	50%, 70%		{ left: -200% }
+}
+/* complétez le sélecteur : */
+#slideshow .slider {
+	/* ... avec la propriété animation */
+	animation: slider 32s infinite;
+}
+#timeline {
+	position: absolute;
+	background: #999;
+	bottom: 15px;
+	left: 15px;
+	height: 1px;
+	background: rgb(214,98,13);
+	background: rgba(214,98,13,.8);
+	width: 0;
+	/* fonction d'animation */
+	animation: timeliner 32s infinite;
+}
+@keyframes timeliner {
+	0%, 25%, 50%, 75%, 100%	{ width: 0;		}
+	20%, 45%, 70%, 90%		{ width: 100%;	}
+}
+@keyframes figcaptionner {
+	0%, 25%, 50%, 75%, 100%						{ bottom: -55px;	}
+	5%, 20%, 30%, 45%, 55%, 70%, 80%, 95%		{ bottom: 5px;		}
+}
+/* ajouter à l'élément : */
+#slideshow figcaption {
+	/* ... la propriété animation */
+	animation: figcaptionner 32s infinite;
+}
+.play_commands {
+	/* positionnement en haut à droite */ 
+	position: absolute;
+	top: 25px; right: 25px;
+	z-index: 10;
+	/* dimensionnement des icônes */
+	width: 22px;
+	height: 22px;
+	text-indent: -9999px;
+	border:0 none;
+	/* placez l'opacité à 1 si vous souhaitez voir les commandes */
+	opacity: 0;
+	/* préparation de transition sur opacicty et right */
+	transition: opacity 1s, right 1s;
+}
+/* on décale play légèrement sur la gauche */
+.play { right: 55px; cursor: default; }
+ 
+/* création de l'icône pause avec 2 pseudos éléments */
+.pause:after,
+.pause:before {
+	position: absolute;
+	display: block;
+	content: " ";
+	top:0;
+	width:38%;
+	height: 22px;
+	background: #fff;
+	background: rgba(255,255,255,0.5);
+}
+.pause:after { right:0; }
+.pause:before {	left:0; }
+ 
+/* création de l'icône play avec des bordures */
+.play {
+	width: 1px; 
+	height: 1px; 
+	/* les transparentes forment la flèche */
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 20px solid #fff; 
+	border-left: 20px solid rgba(255,255,255,0.5); 
+	/* renseignez 1 pour voir l'icône de suite */
+	opacity: 0;
+}
+ 
+/* apparition du bouton pause au survole */
+/* apparition des boutons au focus */
+#slideshow:hover .pause,
+.play_commands:focus {
+	opacity: 1;
+	outline: none;
+}
+/* stopper les animation */
+.sl_command:target ~ #slideshow .slider,
+.sl_command:target ~ #slideshow figcaption,
+.sl_command:target ~ #slideshow #timeline,
+.sl_command:target ~ #slideshow .dots_commands li:first-child a:after {
+	animation-play-state: paused;
+}
+ 
+/* redémarrer les animations */
+#sl_play:target ~ #slideshow .slider,
+#sl_play:target ~ #slideshow figcaption,
+#sl_play:target ~ #slideshow #timeline,
+#sl_play:target ~ #slideshow .dots_commands li:first-child a:after {
+	animation-play-state: running;
+}
+ 
+/* switch entre les boutons */
+.sl_command:target ~ #slideshow .pause 		{ opacity:0; }
+#sl_play:target ~ #slideshow:hover .pause,
+#sl_play:target ~ #slideshow .pause:focus 	{ opacity:1; }
+.sl_command:target ~ #slideshow .play 		{ opacity:1; right: 25px; cursor: pointer; }
+#sl_play:target ~ #slideshow .play 			{ opacity:0; right: 55px; cursor: default; }
+
+
+
+#slideshow .c_slider {
+	position: absolute;
+	left:0; top:0;
+	width: 300%;
+	height: 310px;
+}
+
+/* on cache le slider */
+.sl_i:target ~ #slideshow .slider									{ visibility: hidden }
+/* on planque la 1ère pastille (cf. bonux suivant) */
+.sl_i:target ~ #slideshow .dots_commands li:first-child a:after		{ display:none; }
+/* pour afficher la 2ème pastille (cf. bonux suivant) */
+.sl_i:target ~ #slideshow .dots_commands li:first-child a:before	{ display:block; }
+ 
+/* lorsque on cible le premier slider */
+/* on cache tous les "précédent" et "suivant" */
+#sl_i1:target ~ #slideshow .commands								{ display: none; }
+/* on affiche seulement deux flèches */
+#sl_i1:target ~ #slideshow .commands1								{ display: block; }
+/* correspond au décalage des images */
+#sl_i1:target ~ #slideshow .c_slider								{ background-position: 0 0, 640px 0, 1280px 0, 1920px 0; }
+/* on place la pastille tout à gauche */
+#sl_i1:target ~ #slideshow .dots_commands li:first-child a:before	{ left:0; }
+ 
+/* même procédé lorsqu'on cible le second slide */
+#sl_i2:target ~ #slideshow .commands								{ display: none; }
+#sl_i2:target ~ #slideshow .commands2								{ display: block; }
+#sl_i2:target ~ #slideshow .c_slider								{ background-position: -640px 0, 0 0, 640px 0, 1280px 0; }
+#sl_i2:target ~ #slideshow .dots_commands li:first-child a:before	{ left:18px; }
+ 
+/* puis le 3ème */
+#sl_i3:target ~ #slideshow .commands								{ display: none; }
+#sl_i3:target ~ #slideshow .commands3								{ display: block; }
+#sl_i3:target ~ #slideshow .c_slider								{ background-position: -1280px 0, -640px 0, 0 0, 640px 0; }
+#sl_i3:target ~ #slideshow .dots_commands li:first-child a:before	{ left:36px; }
+ 
+ @font-face {
+	font-family: 'Ailerons';
+	src: url('../fonts/Ailerons-regular.eot');
+	src: url('../fonts/Ailerons-regular.woff') format('woff'), 
+	url('../fonts/Ailerons-regular.ttf') format('truetype'), 
+	url('../fonts/Ailerons-regular.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'Ailerons';
+	src: url('../fonts/Ailerons-regular.eot');
+	src: url('../fonts/Ailerons-regular.woff') format('woff'), 
+	url('../fonts/Ailerons-regular.ttf') format('truetype'), 
+	url('../fonts/Ailerons-regular.svg') format('svg');
+	font-weight:bold;
+}
+ 
+ @font-face {
+	font-family: 'Brandon';
+	src: url('../fonts/Brandon_bld.eot');
+	src: url('../fonts/Brandon_bld.woff') format('woff'), 
+	url('../fonts/Brandon_bld.ttf') format('truetype'), 
+	url('../fonts/Brandon_bld.svg') format('svg');
+	font-weight: bold;
+}
+ 
+@font-face {
+	font-family: 'Brandon';
+	src: url('../fonts/Brandon_reg.eot');
+	src: url('../fonts/Brandon_reg.woff') format('woff'), 
+	url('../fonts/Brandon_reg.ttf') format('truetype'), 
+	url('../fonts/Brandon_reg.svg') format('svg');
+}
+
+table{
+	 width:100%;
+ }
+
+footer{
+	 background-image: url(../image/background_footer.jpg);
+	 background-attachment: fixed;
+	 color:white;
+	 font-family:"Ailerons";
+	 
+ }
+ #savoir_faire,#menu,#reseau{
+	 text-align:left;
+	 padding-left:3%;
+ }
+ #list_savoir,#list_menu,#list_reseau{
+	 list-style-type:none;
+	 text-align:left;
+ }
+ #vide{
+    width:56%;	 
+ }
+
+ #ligne {
+	 padding: 0%;
+	 margin: 0%; 
+	 border: solid 1px #434343; 
+	 width: 6%;
+}
+ #ligne_long {
+	 padding: 0%; 
+	 margin-left:auto;
+	margin-right:auto;
+	 border: solid 1px #434343; 
+	 width: 50%;
+}
+#ligne_des {
+	 padding: 0px;
+	 margin-left:35%;
+	margin-right:auto;
+	 border: solid 1px #434343; 
+	 width: 15%;
+}
+
+#reseau,#menu
+{
+	color:white;
+}
+ 
+ a.nsa_ent:link,a.ec_ent:link,a.dt_ent:link,a.ds_ent:link,a.dess_ent:link,
+ a.me_ent:link,a.br_ent:link,a.lu_ent:link,a.go_ent:link,a.bru_ent:link,
+ a.cont_ent:link,a.bout_ent:link,a.Catego_ent:link,a.admin:link,a.pagnier_ent:link,a.client:link{
+	 color:#434343;
+ }
+ 
+ a.bout_ent:visited,a.Catego_ent:visited,a.admin:visited,a.client:visited{
+	 color:#434343;
+ }
+ 
+ a.nsa_ent:hover,a.ec_ent:hover,a.dt_ent:hover,a.ds_ent:hover,a.dess_ent:hover,
+ a.me_ent:hover,a.br_ent:hover,a.lu_ent:hover,a.go_ent:hover,a.bru_ent:hover,
+ a.cont_ent:hover,a.bout_ent:hover,a.Catego_ent:hover,a.admin:hover,a.pagnier_ent:hover,a.client:hover{
+	 color:#baa25a;
+ }
+ a.nsa_ent,a.ec_ent,a.dt_ent,a.ds_ent,a.dess_ent,
+ a.me_ent,a.br_ent,a.lu_ent,a.go_ent,a.bru_ent,
+ a.cont_ent,a.bout_ent,a.Catego_ent,a.admin,a.pagnier_ent,a.client{
+	 color:#434343;
+ }
+ 
+ 
+ 
+ a.nsa:link,a.cont:link,a.ec:link,a.dt:link,a.ds:link,a.dess:link,
+ a.br:link,a.lu:link,a.go:link,a.bru:link,
+ a.cred:link,a.ml:link{
+	 color:white;
+ }
+ 
+ a.nsa:visited,a.cont:visited,a.ec:visited,a.dt:visited,a.ds:visited,a.dess:visited,
+ a.br:visited,a.lu:visited,a.go:visited,a.bru:visited,
+ a.cred:visited,a.ml:visited{
+	 color:white;
+ }
+ 
+ a.nsa_ent:hover,
+ a.nsa:hover,a.cont:hover,a.ec:hover,a.dt:hover,a.ds:hover,a.dess:hover,
+ a.br:hover,a.lu:hover,a.go:hover,a.bru:hover,
+ a.cred:hover,a.ml:hover{
+	 color:#baa25a;
+ }
+ a.nsa,a.cont,a.ec,a.dt,a.ds,a.dess,
+ a.br,a.lu,a.go,a.bru,
+ a.cred,a.ml{
+	 text-decoration:none;
+ }
+ 
+ .titre_gen
+ {
+	 color: #baa25a;
+	 font-family:"Aileron";
+ }
+ 
+ .login
+{
+	display:block;
+	position:absolute;
+	right:10px;
+	top:0px;
+	font-family:"Brandon";
+	color:#434343;
+}
+ 
+ input[type=password],input[type=email],input[type=text],input[type=number],select{
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit],button {
+    width: 100%;
+    background-color: #baa25a;
+    color: white;
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+

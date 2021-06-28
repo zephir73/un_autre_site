@@ -1,0 +1,46 @@
+header, footer, #impression
+{
+	display:none;
+}
+
+article
+{
+	font-family:"Brandon";
+	color:#434343;
+}
+
+#vide_commande
+{
+	padding-top:30px;
+	padding-left:150px;
+}
+
+.client_addresse
+{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+td.Livraison
+{
+	padding-left:300px;
+}
+
+p
+{
+	margin:0px;
+}
+
+table.facture_detail
+{
+	border-collapse:collapse;
+}
+
+table.facture_detail th,table.facture_detail td
+{
+	border:1px solid #434343;
+}
+
+
+
+

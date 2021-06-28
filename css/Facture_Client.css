@@ -1,0 +1,59 @@
+article
+{
+	padding-top:100px;
+	padding-bottom:100px;
+	font-family:"Brandon";
+	color:#434343;
+}
+
+p
+{
+	margin:0px;
+}
+
+#vide_commande
+{
+	padding-top:30px;
+	padding-left:150px;
+}
+
+.addresse_client
+{
+		display:block;
+		width:70%;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		padding-bottom:50px;
+
+}
+
+#impression
+{
+	margin-bottom:100px;
+}
+
+.detail_facture
+{
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:3%;
+	background-color:#f2f2f2;
+	text-align:center;
+	margin-bottom:3%;
+	
+}
+
+table.facture_detail
+{
+	border-collapse:collapse;
+}
+
+table.facture_detail th,table.facture_detail td
+{
+	border:1px solid #434343;
+}
+
+
+

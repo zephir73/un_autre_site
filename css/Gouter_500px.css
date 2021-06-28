@@ -1,0 +1,37 @@
+@media screen and (max-width: 500px)
+{
+	#menu-deroulant {
+	/* on centre le menu dans la page */
+		text-align: center;
+	}
+	#menu-deroulant li {
+	/* on place les liens du menu horizontalement */
+		display: block;
+	}
+	#menu-deroulant ul li {
+	/* on enlève ce comportement pour les liens du sous menu */
+	   display:block;
+	}
+	#menu-deroulant li a {
+		display: block;
+	}
+	#menu-deroulant ul {
+		display:none;
+	/* on cache les sous menus complètement sur la gauche */
+	   
+	}
+	p,#menu-deroulant{
+		 font-family:"Brandon";
+		 color:#434343;
+	 }
+	 
+	 .login
+	 {
+		display:none;
+	 }
+	 
+	#slideshow
+	{
+		display:none;
+	}
+}

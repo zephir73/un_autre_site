@@ -1,0 +1,28 @@
+article
+{
+	margin-top:100px;
+	margin-bottom:100px;
+	font-family:"Brandon";
+	color:#434343;
+}
+
+.gestion_client_recherche{
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:50px;
+	border-radius:5px;
+	background-color:#f2f2f2;
+}
+
+.gestion_client{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:5px;
+	background-color:#f2f2f2;
+}
+
+
+
+

@@ -1,0 +1,10 @@
+@media screen and (max-width: 500px)
+{
+	.client_login
+	{
+		padding-top:20%;
+		width:100%;
+		background-color:#f2f2f2;
+		margin-left:0%;
+	}
+}

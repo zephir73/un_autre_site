@@ -1,0 +1,48 @@
+ #slideshow figcaption {
+	 color:#582429;
+ }
+ 
+ .description{
+	 border: 1px solid #baa25a;
+	 text-align:center;
+ }
+ .description_titre{
+	 color: #baa25a;
+	 font-family:"Brandon";
+	 
+ }
+ 
+ .contact{
+	 font-family:"Brandon";
+	 text-align:left;
+	 color:#f08307;
+ }
+ 
+ #contact{
+	 padding-left:5%;
+	 padding-right:5%;
+ }
+ 
+ .imgIndex
+ {
+	 width:450px;
+	 height:300px;
+ }
+ 
+ .the
+ {
+	 margin-left:50%;
+	  width:450px;
+	 height:500px;
+ }
+ 
+ .espace
+ {
+	 margin-left:50%;
+ }
+ 
+ 
+ 
+ 
+ 
+ 

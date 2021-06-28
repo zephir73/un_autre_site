@@ -1,0 +1,27 @@
+article
+{
+	padding-top:50px;
+	padding-bottom:50px;
+}
+
+
+
+.Gestion_Commande_Client,.Recherche_Commande
+{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	
+	border-radius:5px;
+	background-color:#f2f2f2;
+}
+
+table.Gestion_Commande_Client,table.Recherche_Commande
+{
+	border-radius:5px;
+	border:1px solid blue;
+	font-family:"Brandon";
+	color:#434343;
+	margin-top:50px;
+}
+

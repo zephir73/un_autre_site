@@ -1,0 +1,68 @@
+body
+{
+	font-family:"Brandon";
+	color:#434343;
+}
+
+article
+{
+	margin-top:100px;
+	margin-bottom:100px;
+}
+
+table.Adresse
+{
+	width:50%;
+	text-align:center;
+	background-color:#f2f2f2;
+	border-collapse:collapse;
+	
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#vide_adresse
+{
+	padding-top:30px;
+	padding-left:150px;
+}
+
+table.Adresse th,td
+{
+	
+}
+
+
+
+table.commande_client
+{
+	border-collapse:collapse;
+	background-color:#f2f2f2;
+	text-align:center;	
+}
+
+#vide_commande
+{
+	padding-top:30px;
+}
+
+table.commande_client td, table.commande_client th 
+{
+  border: 1px solid #434343;
+
+  
+}
+
+
+input[type=submit].raf,select{
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+	
+

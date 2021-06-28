@@ -1,0 +1,29 @@
+body
+{
+	font-family:"Brandon";
+	color:#434343;
+}
+
+article
+{
+	margin-top:10%;
+}
+
+table.Recap_Commande th, table.Recap_Commande td
+{
+	border:1px solid #424242;
+	
+}
+
+table.Recap_Commande
+{
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	border-collapse: collapse;
+	background-color:#f2f2f2;
+	text-align:center;
+	
+	margin-bottom:100px;
+}
+

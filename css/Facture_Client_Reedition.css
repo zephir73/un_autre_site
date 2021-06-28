@@ -1,0 +1,54 @@
+body
+{
+	font-family:"Brandon";
+	color:#434343;
+}
+article
+{
+	margin-top:100px;
+	margin-bottom:100px;
+}
+
+th.Livraison,td.Livraison
+{
+	padding-left:300px;
+}
+
+#vide_commande
+{
+	padding-top:30px;
+	padding-left:150px;
+}
+
+table.adresse
+{
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+table.detail th, table.detail td
+{
+	border:1px solid #424242;
+}
+
+.detail
+{
+	margin-top:50px;
+}
+
+table.detail 
+{
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	border-collapse: collapse;
+	background-color:#f2f2f2;
+	text-align:center;
+}
+
+p
+{
+	margin:0px;
+}

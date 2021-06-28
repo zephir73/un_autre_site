@@ -1,0 +1,30 @@
+body{
+	font-family:"Brandon";
+	color:#434343;
+}
+
+.gestion_client{
+	width:100%;
+	margin-top:50px;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:5px;
+	background-color:#f2f2f2;
+	
+}
+
+.Modif_info
+{
+	width:50%;
+	margin-top:50px;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:5px;
+	background-color:#f2f2f2;
+}
+
+
+article{
+	margin-top:100px;
+	margin-bottom:100px;
+}

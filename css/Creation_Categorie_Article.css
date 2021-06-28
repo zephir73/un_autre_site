@@ -1,0 +1,53 @@
+.Creation_Categorie{
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:50px;
+	border-radius:5px;
+	background-color:#f2f2f2;
+}
+
+.Supprime_Article{
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	margin-bottom:100px;
+	border-radius:5px;
+	background-color:#f2f2f2;
+}
+
+body
+{
+	font-family:"Brandon";
+	color:#434343;
+}
+
+article{
+	margin-top:200px;
+}
+
+table.Article
+{
+	background-color:#f2f2f2;
+	width:100%;
+}
+
+textarea
+{
+	width:99%;
+	border: 2px solid #765942;
+	
+}
+
+input[type=file] 
+{
+    width: 100%;
+    background-color: #baa25a;
+    color: white;
+    padding: 14px 0px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -1,0 +1,46 @@
+body
+{
+	font-family:"Brandon";
+	color:#434343;
+}
+
+
+article
+{
+	margin-top:10%;
+	margin-bottom:10%;
+}
+
+
+form{
+	border-radius:5px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.login
+{
+	display:block;
+	position:absolute;
+	right:10px;
+	top:0px;
+	font-family:"Brandon";
+	color:#434343;
+}
+
+
+.client_login
+{
+	width:50%;
+	background-color:#f2f2f2;
+	margin-left:25%;
+}
+
+.titre
+{
+	font-family:"Ailerons";
+	color:#434343;
+}
+
+
+

@@ -1,0 +1,69 @@
+@media screen and (max-width: 500px)
+{
+	body
+	{
+		margin-top:25%;
+	}
+	
+a.client
+{
+	display:none;
+}
+
+h2,h4
+{
+	line-height:100%;
+
+}
+
+h3
+{
+	font-weight: small;
+}
+
+.h2
+{
+	line-height:100%;
+	
+}
+
+
+table.boutique th, table.boutique td
+{
+	width:100%;
+	display:inline-table;
+}
+
+.ess
+{
+	display:none;
+}
+
+#menu-deroulant {
+/* on centre le menu dans la page */
+	text-align: center;
+}
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+	display: block;
+}
+#menu-deroulant ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+   display:block;
+}
+#menu-deroulant li a {
+	display: block;
+}
+#menu-deroulant ul {
+	display:none;
+/* on cache les sous menus complètement sur la gauche */
+   
+}
+p,#menu-deroulant{
+	 font-family:"Brandon";
+	 color:#434343;
+ }
+	
+	
+    
+}

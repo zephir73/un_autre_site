@@ -1,0 +1,21 @@
+#---------------------------------------------------------------
+
+# Insert: des enregistrements sur les table Droit, Etat_Commande et Client
+
+# pour eviter quelque probleme d_enregistrement
+
+#---------------------------------------------------------------
+
+INSERT INTO Droit ( ID_Droit, Autorisation_Droit) VALUE (NULL, 'Client');
+
+INSERT INTO Droit ( ID_Droit, Autorisation_Droit) VALUE (NULL,'Admin');
+
+
+INSERT INTO Etat_Commande (ID_Etat_Commande, Etat_Commande) VALUE (NULL, 'Payer');
+
+INSERT INTO Etat_Commande (ID_Etat_Commande, Etat_Commande) VALUE (NULL, 'Pas payer');
+
+INSERT INTO Etat_Commande (ID_Etat_Commande, Etat_Commande) VALUE (NULL, 'En cours');
+
+
+INSERT INTO `client` (`ID_Client`, `Nom_Client`, `Prenom_Client`, `Nb_Tel_Fix_Client`, `Nb_Tel_Port_Client`, `Adresse_Client`, `Ville_Client`, `Cp_Client`, `Email_Client`, `Mdp_Client`, `ID_Droit`) VALUES (NULL, 'Cyprien', 'Didier', '+330479364826', '+330479364826', 'Le chef lieu', 'Betton-bettonnet', '73390', 'didier.cyprien@gmail.com', 'mdp', '2');

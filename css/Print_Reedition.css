@@ -1,0 +1,53 @@
+body
+{
+	font-family:"Brandon";
+	color:#434343;
+	font-size:20px;
+}
+
+
+header
+{
+	display:none;
+}
+
+footer
+{
+	display:none;
+}
+
+#impression
+{
+	display:none;
+}
+
+p
+{
+	margin:0px;
+}
+
+th.Livraison,td.Livraison
+{
+	padding-left:300px;
+}
+
+.detail
+{
+	margin-top:50px;
+}
+
+table.detail th, table.detail td
+{
+	border:1px solid #424242;
+}
+
+table.detail
+{
+	border-collapse:collapse;
+}
+
+#vide_commande
+{
+	padding-top:30px;
+	padding-left:150px;
+}
